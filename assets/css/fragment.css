@@ -1,0 +1,20 @@
+
+
+
+@keyframes bright {
+  33% {
+    color: rgb(10, 121, 10);
+  }
+
+  66% {
+    color: rgb(64, 61, 61);
+  }
+  
+  99% {
+    color: rgb(23, 47, 178);
+  }
+}
+
+.bright-colors {
+  animation: bright 0.7s infinite;
+}

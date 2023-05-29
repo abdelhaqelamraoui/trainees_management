@@ -1,0 +1,23 @@
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(238, 239, 227, 0.101);
+}
+
+.full-height {
+  height: 100%;
+}
+
+input {
+  border: 1px solid rgba(51, 48, 48, 0.731) !important;
+}
