@@ -4,7 +4,7 @@
 <div></div>
 
 <div>
-  <div class="title">
+  <div class="title fw-bold">
     Trainees' Management Application
   </div>
   

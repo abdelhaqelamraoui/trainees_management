@@ -25,9 +25,7 @@
           <th>Last Name</th>
           <th>Date of birth</th>
           <th>Phone</th>
-          <th>Email</th>
-          <th></th>
-          <th></th>
+          <th colspan="3">Email</th>
         </tr>
       </thead>
 

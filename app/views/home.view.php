@@ -1,6 +1,6 @@
 
 <!-- home -->
-<div class="full-height">
+<div class="">
 
   <h2 class="text-center text-uppercase mt-5 bright-colors">
     Welcome to Trainees' Management Application
