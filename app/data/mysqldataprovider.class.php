@@ -115,7 +115,7 @@ class MysqlDataProvider extends DataProvider {
     return empty($res) ? false : $res;
   }
 
-  function get_trainees_by_email($email){
+  function get_trainees_by_email($email) {
     $res = $this->db->query(
       'SELECT * FROM trainee WHERE email LIKE :email;',
       [':email' => '%'.$email.'%'],
@@ -130,12 +130,19 @@ class MysqlDataProvider extends DataProvider {
    * get_trainees
    *
    * @param  string $order_by the order for getting trainees (cne, first_name, last_name, date_of_birth)
+   * @param  string $order 'asc' for ascendant and 'desc' for descendant order
    * @return array on success, else `false`
    */
-  function get_trainees($order_by = 'id') : array | false {
+  function get_trainees($order_by = 'id', $order = 'asc') : array | false {
     $res = null;
-    if(in_array($order_by, ['cne', 'first_name', 'last_name', 'date_of_birth'])) {
-      $res = $this->db->query('SELECT * FROM trainee ORDER BY $order_by;', null, 'Trainee' );
+    $order = strtoupper($order);
+    $orders = ['cne', 'first_name', 'last_name', 'date_of_birth', 'phone', 'email'];
+    if(in_array($order_by, $orders)) {
+      if($order === 'DESC') {
+        $res = $this->db->query("SELECT * FROM trainee ORDER BY $order_by DESC;", null, 'Trainee' );
+      } else {
+        $res = $this->db->query("SELECT * FROM trainee ORDER BY $order_by ASC;", null, 'Trainee' );
+      }
     } else {
       $res = $this->db->query('SELECT * FROM trainee;', null, 'Trainee' );
     }

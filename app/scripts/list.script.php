@@ -3,12 +3,18 @@
 
 require_once('../../app/app.php');
 
+if(is_get()) {
 
-Data::init(new MysqlDataProvider());
-$data = Data::get_trainees();
-Data::close();
+  $order_by = sanitize($_GET['order_by'] ?? false);
+  $order = sanitize($_GET['order'] ?? false);
 
-header('Content-Type: application/json');
-echo json_encode($data);
+  Data::init(new MysqlDataProvider());
+  $data = Data::get_trainees($order_by, $order);
+  Data::close();
+  
+  header('Content-Type: application/json');
+  echo json_encode($data);
+}
+
 
 ?>

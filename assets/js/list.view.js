@@ -1,15 +1,14 @@
 
-function loadTraineesList() {
-
-  //onsole.log('called now');
-
+function loadTraineesList(orderBy = 'id', order = 'asc') {
+  console.log(orderBy);
   const tbody = document.getElementById('list')
 
   tbody.innerHTML = ''
   
   let xhr = new XMLHttpRequest()
+  const url = `app/scripts/list.script.php?order_by=${orderBy}&order=${order}`
   try {
-    xhr.open('GET', 'app/scripts/list.script.php', true)
+    xhr.open('GET', url, true)
   } catch (error) {
     console.error(error)
   }
@@ -55,5 +54,9 @@ function loadTraineesList() {
   }
 
   xhr.send()
+
+}
+
+function loadTraineesListByCNE() {
 
 }

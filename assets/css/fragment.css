@@ -18,3 +18,13 @@
 .bright-colors {
   animation: bright 0.7s infinite;
 }
+
+th > .link-dark {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(18, 17, 30) !important;
+}
+
+th > .link-dark:hover {
+  color: rgb(12, 102, 157) !important;
+}

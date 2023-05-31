@@ -44,7 +44,7 @@ abstract class DataProvider {
 
   abstract function get_trainees_by_email(string $email);
 
-  abstract function get_trainees();
+  abstract function get_trainees($order_by = 'id', $order = 'asc');
 
   abstract function close();
 

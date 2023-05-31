@@ -73,12 +73,12 @@ class Data {
     return self::$dataProvider->get_trainees_by_phone($phone);
   }
 
-  static function get_trainees_by_email($email) : Trainee | false {
+  static function get_trainees_by_email($email) : array | false {
     return self::$dataProvider->get_trainees_by_email($email);
   }
 
-  static function get_trainees() : array | false {
-    return self::$dataProvider->get_trainees();
+  static function get_trainees($order_by = 'id', $order = 'asc') : array | false {
+    return self::$dataProvider->get_trainees($order_by, $order);
   }
   
   

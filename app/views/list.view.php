@@ -8,21 +8,18 @@
   <table class="table table-striped table-bordered mt-5">
     <thead class="table-success">
       <tr class="text-center">
-        <th>N°</th>
-        <th>CNE</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Date of birth</th>
-        <th>Phone</th>
-        <th colspan="3">Email</th>
+        <th><span class="link-dark" onclick="loadTraineesList('id')">N°</span></th>
+        <th><span class="link-dark" onclick="loadTraineesList('cne')">CNE</span></th>
+        <th><span class="link-dark" onclick="loadTraineesList('first_name')">First Name</span></th>
+        <th><span class="link-dark" onclick="loadTraineesList('last_name')">Last Name</span></th>
+        <th><span class="link-dark" onclick="loadTraineesList('date_of_birth')">Date of birth</span></th>
+        <th><span class="link-dark" onclick="loadTraineesList('phone')">Phone</span></th>
+        <th colspan="3"><span class="link-dark" onclick="loadTraineesList('email')">Email</span></th>
       </tr>
     </thead>
-
- 
-
     <tbody class="table-group-divider" id="list"></tbody>
+    <script>loadTraineesList()</script>
   </table>
 
-  <script> loadTraineesList() </script>
 
 </div>
