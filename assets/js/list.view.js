@@ -1,6 +1,6 @@
 
 function loadTraineesList(orderBy = 'id', order = 'asc') {
-  console.log(orderBy);
+
   const tbody = document.getElementById('list')
 
   tbody.innerHTML = ''

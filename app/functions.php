@@ -37,6 +37,9 @@
    * trims a value and filters special chars
    */
   function sanitize(string $value, $filter=FILTER_SANITIZE_SPECIAL_CHARS) {
+    $value = trim($value);
+    if(strlen($value) === 0)
+      return false;
     return filter_var(trim($value),$filter);
   }
 
@@ -60,6 +63,22 @@
       $str = $value;
     echo "<script>alert('$str')</script>";
     
+  }
+
+  
+  /**
+   * echos a value afters cleaning output buffer
+   *
+   * @param  mixed $data
+   * @param  bool $json encode data to JSON or not
+   */
+  function respond($data, $json = false) {
+    ob_clean();
+    if($json === true) {
+      echo json_encode($data);
+    } elseif($json === false) {
+      echo $data;
+    }
   }
 
   

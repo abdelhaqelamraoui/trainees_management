@@ -7,12 +7,23 @@ Global Idea:
   TODO [0] : add documentation
   TODO [0] : add the app initialisation part (create db, table, etc.)
 
+Fix:
+  TODO [0] : the inserted date when editing a trainee is not as wanted
+
 
 DB:
   TODO [0] : 
 
 JS:
-  TODO [0] : Use AJAX
+  TODO [0] : Use AJAX ans JS
+    TODO [x] : listing trainees 
+    TODO [x] : listing searched trainees 
+    TODO [x] : adding trainee 
+    TODO [x] : editing trainee 
+    TODO [x] : removing trainee 
+    TODO [] : confirmation 
+    TODO [] : buttons 
+    TODO [] : redirections 
 
 
 DESIGN:

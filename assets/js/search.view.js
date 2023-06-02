@@ -7,15 +7,11 @@ function loadTraineesSearch() {
 
   tbody.innerHTML = ''
 
-  console.log('loadTraineesSearch: clicked')
-  
   let option = document.getElementById('search-option').value
   let pattern = document.getElementById('search-pattern').value
 
   if(option.length !== 0 && pattern.length !== 0) {
     
-    // console.log(option, pattern);
-
     let xhr = new XMLHttpRequest()
     let url = `app/scripts/search.script.php?option=${option}&pattern=${pattern}`
     xhr.open('GET', url, true)

@@ -16,9 +16,6 @@
   
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/js/list.view.js"></script>
-  <script src="assets/js/search.view.js"></script>
-
   <title><?=CONFIG['app_name']?></title>
 </head>
 <body>

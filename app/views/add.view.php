@@ -7,22 +7,22 @@
 
 <h2 class="text-center text-uppercase mb-4">Add a new Trainee</h2>
 
-  <form method="post" class="form border border-2 rounded-2 p-5 pb-4">
+  <form method="post" id="add-form" class="form border border-2 rounded-2 p-5 pb-4">
   
     <div class="row mb-4 gap-4">
   
       <div class="col">
         <div class="mb-2">
           <label for="cne" class="form-label">CNE</label>
-          <input type="text" name="cne" id="cne" class="form-control" required>
+          <input type="text" name="cne" id="cne" class="form-control" pattern="^\S(\w|\d){3,}" autofocus required>
         </div>
         <div class="mb-2">
           <label for="first-name" class="form-label">First name</label>
-          <input type="text" name="first-name" id="first-name" class="form-control" required>
+          <input type="text" name="first-name" id="first-name" pattern="^\w+" class="form-control" required>
         </div>
         <div class="mb-2">
           <label for="last-name" class="form-label">Last name</label>
-          <input type="text" name="last-name" id="last-name" class="form-control" required>
+          <input type="text" name="last-name" id="last-name" pattern="^\w+" class="form-control" required>
         </div>
       </div>
       
@@ -34,20 +34,22 @@
         </div>
         <div class="mb-2">
           <label for="phone" class="form-label">Phone</label>
-          <input type="tel" name="phone" id="phone" class="form-control" required>
+          <input type="tel" name="phone" id="phone" class="form-control">
         </div>
         <div class="mb-2">
           <label for="email" class="form-label">Email</label>
-          <input type="email" name="email" id="email" class="form-control" required>
+          <input type="email" name="email" id="email" class="form-control">
         </div>
       </div>
       
     </div>
-    
-      
+          
     <div class="mb-2">
-      <button type="submit" name="add" class="btn btn-primary px-5 float-end">Add</button>
+      <button class="btn btn-primary px-5 float-end">Add</button>
     </div>
   
   </form>
+
 </div>
+
+<script src="assets/js/add.view.js"></script>

@@ -31,7 +31,8 @@
 
     <tbody class="table-group-divider" id="list"></tbody>
   </table>
-  
 
 </div>
+
+<script src="assets/js/search.view.js"></script>
 

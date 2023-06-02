@@ -13,28 +13,9 @@ if(is_get()) {
     $data['trainee'] = $trainee;
   }
 
-
   load_view('remove', $data);
 
 }
 
-
-if(is_post()) {
-  if(isset($_POST['proceed'])) {
-    $id = $_POST['id'];
-    if($id) {
-      Data::init(new MysqlDataProvider());
-      if(Data::remove_trainee($id)) {
-        redirect('list.php');
-      } else {
-        //TODO [0] : indicate error in deletion ! (redirect to error page)
-      }
-    }
-  } 
-  
-  if(isset($_POST['abort'])) {
-    redirect('list.php');
-  }
-}
 
 ?>

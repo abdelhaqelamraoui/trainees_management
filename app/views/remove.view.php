@@ -12,10 +12,12 @@
   </span>
 </h2>
 
-  <form method="post" class="form d-flex gap-5">
+  <form id="remove-form" method="post" class="d-flex gap-5">
     <input type="hidden" name="id" value="<?=$data['trainee']->id?>">
-    <button type="submit" name="proceed" class="btn btn-outline-danger">Proceed</button>
-    <button type="submit" name="abort" class="btn btn-success px-4">Abort</button>
+    <button id="btn-remove" class="btn btn-outline-danger">Remove</button>
+    <button id="btn-cnacel" class="btn btn-success px-4">Cancel</button>
   </form>
 
 </div>
+
+<script src="assets/js/remove.view.js"></script>

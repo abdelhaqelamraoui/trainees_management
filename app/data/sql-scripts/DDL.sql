@@ -1,17 +1,17 @@
 
 
-create database if not exists ista;
+CREATE database IF NOT EXISTS ista;
 
-use ista;
+USE ista;
 
 
 -- trainee
-create table if not exists ista.trainee (
-  id int auto_increment primary key,
-  cne varchar(255) not null unique,
-  first_name varchar(255) not null,
-  last_name varchar(255) not null,
-  date_of_birth date not null,
-  phone varchar(255),
-  email varchar(255)
+CREATE table IF NOT EXISTS ista.trainee (
+  id INT auto_increment PRIMARY KEY,
+  cne VARCHAR(255) NOT NULL UNIQUE,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  date_of_birth DATE NOT NULL,
+  phone VARCHAR(255),
+  email VARCHAR(255)
 );

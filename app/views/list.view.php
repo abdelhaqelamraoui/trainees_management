@@ -18,8 +18,10 @@
       </tr>
     </thead>
     <tbody class="table-group-divider" id="list"></tbody>
-    <script>loadTraineesList()</script>
   </table>
-
-
+  
+  
 </div>
+
+<script src="assets/js/list.view.js"></script>
+<script>loadTraineesList()</script>

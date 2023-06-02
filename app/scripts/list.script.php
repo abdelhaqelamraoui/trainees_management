@@ -5,15 +5,22 @@ require_once('../../app/app.php');
 
 if(is_get()) {
 
-  $order_by = sanitize($_GET['order_by'] ?? false);
-  $order = sanitize($_GET['order'] ?? false);
+  ob_clean();
 
-  Data::init(new MysqlDataProvider());
-  $data = Data::get_trainees($order_by, $order);
-  Data::close();
-  
+  $order_by = sanitize($_GET['order_by'] ?? '');
+  $order = sanitize($_GET['order'] ?? '');
+  $data = null;
+  try {
+    Data::init(new MysqlDataProvider());
+    $data = Data::get_trainees($order_by, $order);
+    Data::close();    
+  } catch (Exception $e) {
+    respond('false');
+  }
+
   header('Content-Type: application/json');
-  echo json_encode($data);
+  respond($data, true);
+  
 }
 
 

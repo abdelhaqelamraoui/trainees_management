@@ -1,15 +1,3 @@
-DROP TABLE IF EXISTS `trainee`;
-
-CREATE TABLE `trainee` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `cne` varchar(255),
-  `first_name` varchar(255) default NULL,
-  `last_name` varchar(255) default NULL,
-  `date_of_birth` varchar(255),
-  `phone` varchar(100) default NULL,
-  `email` varchar(255) default NULL,
-  PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
 
 INSERT INTO `trainee` (`cne`,`first_name`,`last_name`,`date_of_birth`,`phone`,`email`)
 VALUES

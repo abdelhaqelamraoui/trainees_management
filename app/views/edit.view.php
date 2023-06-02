@@ -5,7 +5,7 @@
 
 <div class=" full-height containter-fluid d-flex justify-content-center align-items-center">
 
-  <form method="post" class="form">
+  <form method="post" id="edit-form" class="form border border-2 rounded-2 p-5 pb-4">
 
     <input type="hidden" name="id" value="<?=$data['trainee']->id ?>">
 
@@ -47,8 +47,10 @@
     
       
     <div class="mb-2">
-      <button type="submit" name="update" class="btn btn-warning px-5 float-end border-1 border-dark">Update</button>
+      <button class="btn btn-warning px-5 float-end border-1 border-dark">Update</button>
     </div>
   
   </form>
 </div>
+
+<script src="assets/js/edit.view.js"></script>
